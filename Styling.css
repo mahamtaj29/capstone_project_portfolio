@@ -1,0 +1,680 @@
+/* General styling of entire page*/
+@font-face {
+    font-family: "Poppins";
+    src: url(fonts/Poppins/Poppins-SemiBold.ttf);
+}
+*{
+    margin:0;
+    padding:0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+    letter-spacing: 1px;
+    color: black;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-image: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url("images/common-bg.svg");
+    background-size: cover;
+    background-position: relative;
+    max-width: 100%;
+    min-width: 85%;
+}
+section{
+    height: 100%;
+}
+/* Styling of navigation bar*/
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)), url("images/common-bg.svg");
+    background-size: cover;
+    background-position: relative;
+}
+.nav-container{
+    padding: 10px 10%;
+ }
+ nav{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed; /* NavBar will be fixed during scrolling*/
+    top: 0; /*top side of NavBar*/
+    left: 0; /*left side of navbar*/
+    width: 100%; /*NavBar will expand to whole line*/
+    background-color: rgba(255, 255, 255, 0.934);
+    z-index: 1;
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    transition: 0.2s ease;
+    text-align: center;
+}
+.namelogo{
+    margin: 10px 20px;
+    font-size: 50px;
+    color: #e7356e;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 10px 10%;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color: rgb(104, 6, 196);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    transition: .3s;
+    margin: 10px 20px;
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left:0;
+    bottom: -6px;
+    transition: 0.5s;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+nav ul li a:hover::after{
+    width: 100%; 
+}
+.header-center{
+    margin-top: 20%;
+    font-size: 30px;
+}
+h2, span{
+    color: #e7356e;
+}
+.quote-style{
+    font-size: 40px;
+    color: rgb(104, 6, 196);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+/* Styling of about me section starts from here*/
+.about-container{
+    margin: 0 auto;
+    max-width: 100%;  
+    height: 100%;
+    margin-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 80px;
+}
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+}
+.col1-basic-edu{
+    flex-basis: 32%;
+}
+.col2-basic-edu{
+    flex-basis: 68%;
+}
+.col1-basic-edu img{
+    width: 45%;
+    margin-left: 240px;
+    border-radius: 40px;
+}
+.col2-basic-edu h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #e7356e;
+}
+.col2-basic-edu p{
+    font-size: 28px;
+    letter-spacing: 2px;
+    font-weight: 150;
+    text-align: justify;
+    place-items: center;
+    margin-right: 120px;
+}
+.btn4{
+    display: flex;
+    margin-top: 20px;
+}
+.btn4 a{
+    text-decoration: none;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 100%;
+    color: white;
+    background: rgb(158, 108, 204);
+    font-size: 30px;
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+.fa-regular.fa-envelope, .fa-regular.fa-file, .fa-solid.fa-link{
+    color: white;
+    margin-right: 10px;
+}
+/*Education and Training section styling starts from here*/
+.edu-container{
+    margin: 0 auto; 
+    max-width: 85%;  
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.edu-container h1, .experience-container h1, .project-container h1, .contact-container h1{
+    font-size: 40px;
+    font-weight: 600;
+    color: #e7356e;
+    text-align: center;
+}
+.services-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+.services-list div{
+    background-color: rgb(240, 233, 233);
+    box-shadow: rgb(240, 233, 233);
+    border-bottom: 2px solid #f25083;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 400;
+    border-radius: 15px;
+    transition: transform 0.5s;
+}
+.services-list div i{
+    font-size: 50px;
+}
+.services-list p{
+    font-size: 20px;
+    place-items: center;
+}
+.services-list h2{
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #e7356e;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: rgb(196, 154, 235);
+    transform: translateY(-20px);
+}
+/*Skills section styling starts from here*/
+.experience-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 85%; 
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 80px;
+    padding-top: 150px;
+    padding-bottom: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.experience-box{
+    border: 1px solid rgba(251, 247, 247, 0.638);
+    background-color: rgb(240, 233, 233);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    border-radius: 45px;
+    padding: 65px;
+    align-items: center;
+}
+.experience-box:hover{
+    background: rgb(234, 177, 207);
+    transform: translateY(-20px);
+}
+.experience{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+.ex-div{
+    display: flex;
+    gap: 20px;
+    margin: auto;
+}
+.experience-box h2, .experience-box1 h2, .experience h2{
+    font-size: 50px;
+    font-weight: 600;
+    padding-top: 20px;
+    text-align: center;
+}
+.experience-box p, .experience-box1 p, .experience p{
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 2px;
+    color: #f25083;
+    text-align: center;
+}
+h4{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px;
+    color: rgb(104, 6, 196);
+    text-align: center;
+}
+/*certification section styling starts from here*/
+.experience-box1{
+    border: 1px solid rgba(251, 247, 247, 0.638);
+    background-color: rgb(240, 233, 233);
+    box-shadow: 0 4px 4px rgb(0 0 0 / 10%);
+    border-radius: 45px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 150px;
+    margin-bottom: 180px;
+    padding-top: 100px;
+    padding-bottom: 120px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.experience-box1:hover{
+    background: rgb(234, 177, 207);
+    transform: translateY(-20px);
+}
+.cert-image{
+    width: 35%;
+    height: auto;
+    margin-left: 30%;
+}
+/*Project section styling starts from here*/
+.project-container{
+    max-width: 85%; 
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 50px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    height: 700px;
+    display: block;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layertext{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #f25083);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layertext h3, .layertext p{
+    font-weight: 500;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 20px;
+}
+.layertext a{
+    margin-top: 20px;
+    color: #f9f9f9;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    width: 60px;
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1);
+}
+.work:hover .layertext{
+    height: 100%;
+}
+.btn,.btn2,.btn3{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 5px solid rgb(158, 108, 204);
+    font-size: 18px;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+}
+.btn:hover{
+    background: #3c2cd1;
+    color: white;
+}
+/*Contact me section styling starts from here*/
+.contact-container{
+    max-width: 85%; 
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.contact-me{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: #ede9e9;
+    padding: 15px;
+    margin: 15px 0;
+    color: #f25083;
+    font-size: 18px;
+    border-radius: 16px;
+}
+.btn2{
+    color: white;
+    background: rgb(158, 108, 204);
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-left: 45%;
+    cursor: pointer;
+}
+.btn2:hover{
+    background: #3c2cd1;
+}
+.social-icon{
+    text-align: center;
+}
+.social-icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #f25083;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icon a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.fa-solid.fa-code, .fa-brands.fa-css3, .fa-brands.fa-css3-alt, .fa-brands.fa-js, 
+.fa-brands.fa-react, .fa-brands.fa-node-js, .fa-solid.fa-code, .fa-solid.fa-database,
+.fa-brands.fa-square-js, .fa-brands.fa-github, .fa-brands.fa-python, .fa-brands.fa-linkedin,
+.fa-solid.fa-envelope, .fa-brands.fa-facebook, .fa-brands.fa-twitter{
+    color: rgb(104, 6, 196);
+}
+
+/*Footer Section styling starts from here*/
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #f25083;
+    font-weight: 300;
+}
+
+/*------------Styling for small screens------*/
+/*
+@media only screen and (max-width: 600px) {
+    .namelogo {
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+    .nav-container{
+        padding: 10px 5%;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .copyright p{
+        font-size: 12px;
+    }
+    .quote-style{
+        font-size: 16px;
+    }  
+    .experience-box h2, .experience-box1 h2{
+        font-size: 12px;
+    }
+    .ex-div h4{
+        font-size: 12px;
+    }
+    .ex-div p{
+        font-size: 12px;
+    }
+    .experience h4{
+        font-size: 12px;
+    }
+    .experience p{
+        font-size: 12px;
+    }  
+    .experience{
+        display: block;
+    }
+    .col1-basic-edu, .col2-basic-edu{
+        flex-basis: 100%;
+    }
+    .col1-basic-edu img{
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    .work img{
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin: 0 auto; 
+    }
+    .header-center{
+        margin-top: 100%;
+        font-size: 14px;
+    }
+    .header-center h1 span{
+        font-size: 16px;
+    }
+    .work{
+        display: flex;
+    }
+    
+}*/
+
+/* General styling of entire page */
+@media only screen and (max-width: 600px) {
+    body {
+      min-width: 60%; 
+    }
+    .nav-container {
+      padding: 1px 1%;
+    }
+    nav ul li {
+      margin: 2px 2px;
+    }
+    .header-center h1, .header-center h2{
+      margin-top: 30%;
+      font-size: 16px;
+    }
+    .quote-style {
+        margin-top: 20%;
+        font-size: 20px;
+    }
+    /* Styling of about me section starts from here */
+    .about-container {
+      margin-top: 20px;
+      margin-bottom: 50px;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+    .about-row {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+    }
+    .col1-basic-edu img {
+      width: 80%;
+      margin-left: 40px;
+      margin-bottom: 20px;
+    }
+    .col2-basic-edu {
+      margin-top: 20px;
+    }
+    .col2-basic-edu h1, .edu-container h1, .experience-container h1, .experience-box h2 {
+      font-size: 24px;
+    }
+    .col2-basic-edu p {
+      font-size: 16px;
+      margin-right: 0;
+    }
+    .btn4{
+      flex-direction: column;
+      align-items: center;
+    }
+    .btn4 a{
+      font-size: 16px;
+      width: 80%;
+      margin-right: 0;
+    }
+    /* Education and Training section styling starts from here */
+    .edu-container {
+      margin-top: 30px;
+      margin-bottom: 50px;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+    .services-list {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+    .services-list div {
+      padding: 20px;
+      font-size: 12px;
+    }
+    .services-list div i {
+      font-size: 20px;
+    }
+    .services-list h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .services-list div a {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    /* Skills section styling starts from here */
+    .experience-container {
+      max-width: 100%; 
+      margin-top: 60px; 
+      margin-bottom: 50px;
+      padding-top: 80px;
+      padding-bottom: 20px;
+    }
+    .experience-box,.experience-box1 {
+      padding: 40px;
+    }
+    .experience-box h2,.experience-box1 h2,.experience h2 {
+      font-size: 16px;
+      padding-top: 15px;
+    }
+    .experience-box p,.experience-box1 p,.experience p {
+      font-size: 16px;
+      padding-top: 10px;
+    }
+    h4 {
+      font-size: 16px;
+    }
+  
+    /* Certification section styling starts from here */
+    .experience-box1 {
+      margin-top: 80px; 
+      margin-bottom: 100px;
+      padding-top: 50px;
+      padding-bottom: 60px;
+    }
+    .cert-image {
+      width: 70%; 
+    }
+    /* Project section styling starts from here */
+    .project-container {
+      max-width: 100%; 
+      margin-top: 30px; 
+      margin-bottom: 10px;
+      padding: 30px;
+    }
+    .work-list {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
+    .work img {
+      height: auto;
+    }
+    .layertext {
+      height: 80%; 
+    }
+    .btn,.btn2,.btn3 {
+      margin: 30px auto;
+      width: fit-content;
+      font-size: 16px;
+      padding: 12px 40px;
+    }
+    /* Contact me section styling starts from here */
+    .contact-container {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    form input,form textarea {
+      padding: 12px;
+      font-size: 16px;
+    }
+    .btn2 {
+      padding: 12px 40px;
+      font-size: 16px;
+      margin-left: 0;
+    }
+    .social-icon a {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    /* Footer Section styling starts from here */
+    .copyright {
+      padding: 15px 0;
+      font-size: 14px;
+    }
+  }
+  
