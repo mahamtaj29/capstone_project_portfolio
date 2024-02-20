@@ -7,10 +7,9 @@ This project is a personal portfolio website implemented using HTML and CSS. It 
 1. [Introduction](#introduction)
 2. [Features](#features)
 3. [Technologies Used](#technologies-used)
-4. [Project Structure](#project-structure)
-5. [How to Use](#how-to-use)
-6. [Contributing](#contributing)
-7. [URL](#url)
+4. [How to Use](#how-to-use)
+5. [Contributing](#contributing)
+6. [URL](#url)
 
 ## Introduction
 
@@ -30,14 +29,6 @@ The Portfolio Capstone Project is a web-based representation of my professional 
 
 - HTML5
 - CSS3
-
-## Project Structure
-/portfolio
-├── fonts/
-├── images/
-├── Styling.css
-├── index.html
-...
 
 ## How to Use
 
